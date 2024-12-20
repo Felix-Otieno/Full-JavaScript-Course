@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0turn);
+            }
+
+            100% {
+                transform: rotate(1turn)
+            }
+        }
+
+        @keyframes multi-step-spin {
+            0% {
+                transform: rotate(0turn);
+            }
+
+            25% {
+                transform: rotate(0.25turn);
+            }
+
+            50% {
+                transform: rotate(0.5turn);
+            }
+
+            75% {
+                transform: rotate(0.75turn);
+            }
+
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
+        .spinner {
+            animation: spin 2000ms;
+            animation-iteration-count: infinite;
+        }
+
+        .multi-step-spinner {
+            animation: multi-step-spin 2000ms;
+            animation-iteration-count: infinite;
+        }
+
+        .spinner,
+        .multi-step-spinner {
+            display: block;
+            width: 32px;
+            height: 32px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            height: calc(100vh - 16px);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <img class="spinner" alt="Loading…" src="/images/keyframe-animations/loader.svg" />
+    <img class="multi-step-spinner" alt="Loading…" src="/images/keyframe-animations/loader.svg" />
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .box {
+            animation: fade-out 1000ms;
+            width: 100px;
+            height: 100px;
+            background: slateblue;
+            padding: 8px;
+            display: grid;
+            place-content: center;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Hello World
+    </div>
+</body>
+
+</html>
