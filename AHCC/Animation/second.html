@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applying Multiple Animations</title>
+    <style>
+        :root {
+            overflow: hidden;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sun {
+            background-color: yellow;
+            border-radius: 50%;
+            height: 100vh;
+            aspect-ratio: 1 / 1;
+            /* multiple animations are separated by commas, each animation's parameters are set independently */
+            animation:
+                4s linear 0s infinite alternate rise,
+                24s linear 0s infinite psychedelic;
+        }
+
+        @keyframes rise {
+            from {
+                transform: translateY(110vh);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes psychedelic {
+            from {
+                filter: hue-rotate(0deg);
+            }
+
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+
+</body>
+
+</html>
