@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-position</title>
+    <style>
+        /* Shared among all <div>s */
+        div {
+            background-color: #ffee99;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 80px;
+            margin-bottom: 12px;
+        }
+
+        /* These examples use the `background` shorthand property */
+        .example-one {
+            background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
+        }
+
+        .example-two {
+            background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+        }
+
+        /* Multiple background images: Each image is matched with the
+   corresponding position, from first specified to last. */
+        .example-three {
+            background-image: url("star-transparent.gif"), url("cat-front.png");
+            background-position:
+                0px 0px,
+                right 3em bottom 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-one">Example One</div>
+    <div class="example-two">Example Two</div>
+    <div class="example-three">Example Three</div>
+
+</body>
+
+</html>
